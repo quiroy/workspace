@@ -2,7 +2,7 @@
   "name": "工作台",
   "short_name": "工作台",
   "description": "个人日程与灵感工作台",
-  "start_url": "workbench.html",
+  "start_url": "./",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#eef5f1",
