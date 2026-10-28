@@ -1371,6 +1371,24 @@
     margin-top: 2px;
   }
 
+  .checkin-item-streak.completed {
+    color: var(--success);
+    font-weight: 600;
+  }
+
+  .checkin-item.period-completed .checkin-item-checkbox {
+    background: var(--success);
+    border-color: var(--success);
+  }
+
+  .checkin-item.period-completed {
+    background: #e8f5ec;
+  }
+
+  .checkin-item.period-completed .checkin-item-checkbox svg {
+    opacity: 1;
+  }
+
   .checkin-item-delete {
     width: 28px;
     height: 28px;
@@ -1515,6 +1533,7 @@
     color: var(--text-1);
     word-break: break-word;
     white-space: pre-wrap;
+    padding-right: 80px;
   }
 
   .inspiration-footer {
@@ -1550,7 +1569,7 @@
     right: 12px;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
   }
 
   .insp-action-btn {
@@ -1559,7 +1578,7 @@
     background: transparent;
     color: var(--text-3);
     cursor: pointer;
-    padding: 2px 4px;
+    padding: 4px 6px;
     font-family: inherit;
   }
 
@@ -1607,6 +1626,610 @@
   .empty-state .empty-text {
     font-size: 14px;
   }
+
+  /* Diet Section */
+  .diet-date-header {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-1);
+    margin-bottom: 16px;
+  }
+
+  /* Diet Section */
+  .diet-summary-card {
+    background: linear-gradient(135deg, #e8f5ee 0%, #d5eedd 100%);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .diet-summary-label {
+    font-size: 14px;
+    color: #2d5a3d;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  .diet-summary-amount {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2d5a3d;
+  }
+
+  .diet-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .diet-card {
+    background: var(--card-bg);
+    border-radius: 14px;
+    padding: 14px 16px;
+    box-shadow: var(--shadow);
+    position: relative;
+    border-top: 3px solid var(--primary);
+  }
+
+  .diet-card.meal-breakfast { border-top-color: #ff9f0a; }
+  .diet-card.meal-lunch { border-top-color: #34c759; }
+  .diet-card.meal-dinner { border-top-color: #b8a5d9; }
+  .diet-card.meal-extra { border-top-color: #7ba7d9; }
+  .diet-card.meal-craving { border-top-color: #ff6b81; }
+
+  .diet-card-body {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .diet-meal-tag {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+
+  .diet-meal-tag.meal-breakfast { background: #fff4e5; color: #ff9f0a; }
+  .diet-meal-tag.meal-lunch { background: #e8f8ed; color: #34c759; }
+  .diet-meal-tag.meal-dinner { background: #f3eefb; color: #8b7ab5; }
+  .diet-meal-tag.meal-extra { background: #e8f0f8; color: #7ba7d9; }
+  .diet-meal-tag.meal-craving { background: #ffeef1; color: #ff6b81; }
+
+  .diet-card-content {
+    flex: 1;
+    font-size: 15px;
+    color: var(--text-1);
+    line-height: 1.4;
+    word-break: break-word;
+    min-width: 0;
+  }
+
+  .diet-card-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .diet-price {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ff9f0a;
+  }
+
+  .diet-delete-btn {
+    border: none;
+    background: transparent;
+    color: var(--text-3);
+    cursor: pointer;
+    padding: 4px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .diet-delete-btn:hover { color: var(--danger); }
+
+  .diet-time {
+    font-size: 12px;
+    color: var(--text-3);
+    margin-top: 10px;
+  }
+
+  /* Diet Floating Action Button */
+  .diet-fab {
+    position: fixed;
+    right: 24px;
+    bottom: 90px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    background: var(--primary);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(123, 167, 217, 0.5);
+    z-index: 50;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+
+  .diet-fab:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 8px rgba(123, 167, 217, 0.4);
+  }
+
+  .diet-fab svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Diet Modal Category Buttons */
+  .diet-cat-row {
+    display: flex;
+    gap: 8px;
+  }
+
+  .diet-cat-btn {
+    flex: 1;
+    padding: 10px 4px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background: #f8f8fa;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-2);
+    transition: all 0.15s;
+  }
+
+  .diet-cat-btn.active {
+    border-color: var(--primary);
+    background: var(--primary-light);
+    color: var(--primary);
+  }
+
+  .diet-cat-btn.breakfast.active {
+    border-color: #ff9f0a;
+    background: #fff4e5;
+    color: #ff9f0a;
+  }
+
+  .diet-cat-btn.lunch.active {
+    border-color: #34c759;
+    background: #e8f8ed;
+    color: #34c759;
+  }
+
+  .diet-cat-btn.dinner.active {
+    border-color: #b8a5d9;
+    background: #f3eefb;
+    color: #8b7ab5;
+  }
+
+  .diet-cat-btn.extra.active {
+    border-color: #7ba7d9;
+    background: #e8f0f8;
+    color: #7ba7d9;
+  }
+
+  .diet-cat-btn.craving.active {
+    border-color: #ff6b81;
+    background: #ffeef1;
+    color: #ff6b81;
+  }
+
+  .diet-modal-actions {
+    justify-content: center;
+  }
+
+  .diet-modal-actions .btn {
+    flex: none;
+    padding: 12px 32px;
+  }
+
+  /* Budget - Diet Summary Card */
+  .diet-summary-card.budget-record-card {
+    padding: 12px 14px;
+  }
+
+  .budget-diet-expand {
+    border: none;
+    background: transparent;
+    color: var(--text-3);
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .budget-diet-expand:hover { color: var(--text-2); }
+
+  /* Budget Diet Detail Items */
+  .budget-diet-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px 8px 48px;
+    font-size: 13px;
+    animation: slideDown 0.3s ease;
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .diet-detail-tag {
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+
+  .diet-detail-tag.meal-breakfast { background: #fff4e5; color: #ff9f0a; }
+  .diet-detail-tag.meal-lunch { background: #e8f8ed; color: #34c759; }
+  .diet-detail-tag.meal-dinner { background: #f3eefb; color: #8b7ab5; }
+  .diet-detail-tag.meal-extra { background: #e8f0f8; color: #7ba7d9; }
+  .diet-detail-tag.meal-craving { background: #ffeef1; color: #ff6b81; }
+
+  .diet-detail-content {
+    flex: 1;
+    color: var(--text-2);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+  }
+
+  .diet-detail-price {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--danger);
+    flex-shrink: 0;
+  }
+
+  /* Budget Section */
+  .budget-stats-card {
+    background: linear-gradient(135deg, #e8f5ee 0%, #d5eedd 100%);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .budget-stats-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  .budget-stats-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #2d5a3d;
+  }
+
+  .budget-edit-btn {
+    border: none;
+    background: rgba(255,255,255,0.6);
+    color: #2d5a3d;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .budget-stats-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .budget-stat-item {
+    flex: 1;
+    text-align: center;
+  }
+
+  .budget-stat-num {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2d5a3d;
+    margin-bottom: 4px;
+  }
+
+  .budget-stat-num.spent { color: #ff6b6b; }
+  .budget-stat-num.remain { color: #2d8a4e; }
+
+  .budget-stat-label {
+    font-size: 12px;
+    color: #5a8a6d;
+  }
+
+  .budget-chart-card {
+    background: var(--card-bg);
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow);
+  }
+
+  .chart-collapse-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .chart-collapse-arrow {
+    width: 20px;
+    height: 20px;
+    color: var(--text-3);
+    transition: transform 0.3s;
+  }
+
+  .chart-collapse-arrow.open {
+    transform: rotate(180deg);
+  }
+
+  .chart-collapse-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .chart-collapse-content.open {
+    max-height: 500px;
+  }
+
+  .budget-chart-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 16px 0;
+  }
+
+  #budgetPieChart {
+    width: 180px;
+    height: 180px;
+  }
+
+  .budget-chart-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    justify-content: center;
+  }
+
+  .chart-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--text-2);
+  }
+
+  .chart-legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* Budget Summary Page */
+  .budget-sum-chart-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: var(--shadow);
+  }
+
+  .budget-sum-chart-card .budget-chart-wrap {
+    padding: 8px 0 12px;
+  }
+
+  #budgetSumPieChart {
+    width: 180px;
+    height: 180px;
+  }
+
+  .budget-add-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: var(--primary);
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(123, 167, 217, 0.4);
+  }
+
+  .budget-section-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-1);
+    margin-bottom: 12px;
+    margin-top: 8px;
+  }
+
+  .budget-day-group {
+    margin-bottom: 16px;
+  }
+
+  .budget-day-header {
+    font-size: 13px;
+    color: var(--text-2);
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .budget-day-sum {
+    font-size: 12px;
+    color: var(--text-3);
+  }
+
+  .budget-record-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .budget-record-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: var(--shadow);
+  }
+
+  .budget-record-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .budget-record-icon.cat-food { background: #fff4e5; }
+  .budget-record-icon.cat-transport { background: #e8f0f8; }
+  .budget-record-icon.cat-shopping { background: #fde8f0; }
+  .budget-record-icon.cat-entertainment { background: #f0e8ff; }
+  .budget-record-icon.cat-other { background: #f0f0f0; }
+
+  .budget-record-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .budget-record-cat {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-1);
+    margin-bottom: 2px;
+  }
+
+  .budget-record-note {
+    font-size: 12px;
+    color: var(--text-3);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .budget-record-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  .budget-record-amount {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .budget-record-amount.expense { color: var(--danger); }
+  .budget-record-amount.income { color: var(--success); }
+
+  .budget-record-delete {
+    border: none;
+    background: transparent;
+    color: var(--text-3);
+    cursor: pointer;
+    padding: 4px;
+    font-size: 16px;
+  }
+
+  .budget-record-delete:hover { color: var(--danger); }
+
+  /* Budget Modal */
+  .budget-type-toggle {
+    display: flex;
+    background: #f5f5f7;
+    border-radius: 10px;
+    padding: 4px;
+    margin-bottom: 16px;
+  }
+
+  .budget-type-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-2);
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.15s;
+  }
+
+  .budget-type-btn.active {
+    background: #fff;
+    color: var(--text-1);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+
+  .budget-cat-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .budget-cat-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 10px 4px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background: #f8f8fa;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.15s;
+  }
+
+  .budget-cat-btn.active {
+    border-color: var(--primary);
+    background: var(--primary-light);
+  }
+
+  .budget-cat-icon {
+    font-size: 20px;
+  }
+
+  .budget-cat-label {
+    font-size: 11px;
+    color: var(--text-2);
+  }
+
+  .budget-cat-btn.active .budget-cat-label { color: var(--primary); }
 
   /* Modal */
   .modal-overlay {
@@ -2435,6 +3058,8 @@
 
   /* Responsive */
   @media (max-width: 768px) {
+    html { font-size: 16px; }
+
     .sidebar {
       position: fixed;
       left: 0;
@@ -2450,12 +3075,32 @@
       display: flex;
     }
 
-    .content { padding: 16px; }
+    .nav-item {
+      padding: 16px 24px;
+      font-size: 16px;
+    }
+
+    .page-title { font-size: 18px; }
+
+    .icon-btn {
+      width: 40px;
+      height: 40px;
+    }
+
+    .inspiration-content { font-size: 16px; }
+
+    .section-title { font-size: 17px; }
+
+    .content { padding: 12px; }
     .main-header { padding: 16px; }
     .inspiration-grid { grid-template-columns: 1fr; }
     .jump-box { display: none; }
     .calendar-title { font-size: 16px; }
     .calendar-today-label { font-size: 12px; }
+
+    button { min-height: 44px; }
+
+    input, textarea { font-size: 16px; }
   }
 </style>
 </head>
@@ -2487,6 +3132,14 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
         <span>打卡</span>
       </button>
+      <button class="nav-item" data-view="diet" onclick="switchView('diet', this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2c-3 0-5 2-5 5 0 2 1 3 2 4v11h6V11c1-1 2-2 2-4 0-3-2-5-5-5z"/><path d="M12 22v-7"/><path d="M8 10h8"/></svg>
+        <span>饮食</span>
+      </button>
+      <button class="nav-item" data-view="budget" onclick="switchView('budget', this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        <span>生活费</span>
+      </button>
     </nav>
 
     <div class="sidebar-footer">
@@ -2509,6 +3162,9 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
         </button>
         <button class="icon-btn" id="summaryBtn" onclick="toggleSummary()" title="每日总结">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg>
+        </button>
+        <button class="icon-btn" id="budgetSummaryBtn" onclick="toggleBudgetSummary()" title="图表" style="display:none">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg>
         </button>
         <button class="icon-btn" onclick="openScheduleModal()" title="添加日程">
@@ -2650,6 +3306,81 @@
           </div>
         </div>
       </div>
+
+      <!-- Diet View -->
+      <div class="view" id="view-diet">
+        <div class="diet-date-header" id="dietDateHeader"></div>
+
+        <!-- 今日花费汇总卡片 -->
+        <div class="diet-summary-card">
+          <div class="diet-summary-label">今日饮食花费</div>
+          <div class="diet-summary-amount" id="dietTotalAmount">¥0.00</div>
+        </div>
+
+        <div class="diet-list" id="dietList"></div>
+        <div class="empty-state" id="dietEmpty" style="display:none">
+          <div class="empty-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2c-3 0-5 2-5 5 0 2 1 3 2 4v11h6V11c1-1 2-2 2-4 0-3-2-5-5-5z"/><path d="M12 22v-7"/><path d="M8 10h8"/></svg>
+          </div>
+          <div class="empty-text">还没有饮食记录，快来记录今天吃了什么吧</div>
+        </div>
+
+        <!-- 浮动添加按钮 -->
+        <button class="diet-fab" onclick="openDietModal()" title="添加记录">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+      </div>
+
+      <!-- Budget View -->
+      <div class="view" id="view-budget">
+
+        <div class="budget-stats-card">
+          <div class="budget-stats-header">
+            <span class="budget-stats-title">本月预算</span>
+          </div>
+          <div class="budget-stats-row">
+            <div class="budget-stat-item">
+              <div class="budget-stat-num" id="budgetTotal">¥0</div>
+              <div class="budget-stat-label">总预算</div>
+            </div>
+            <div class="budget-stat-item">
+              <div class="budget-stat-num spent" id="budgetSpent">¥0</div>
+              <div class="budget-stat-label">已花费</div>
+            </div>
+            <div class="budget-stat-item">
+              <div class="budget-stat-num remain" id="budgetRemain">¥0</div>
+              <div class="budget-stat-label">剩余</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="budget-chart-card">
+          <div class="chart-collapse-header" onclick="toggleBudgetChart()">
+            <div class="section-title" style="margin:0">支出分布</div>
+            <svg class="chart-collapse-arrow" id="chartArrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </div>
+          <div class="chart-collapse-content" id="chartCollapse">
+            <div class="budget-chart-wrap">
+              <canvas id="budgetPieChart" width="200" height="200"></canvas>
+            </div>
+            <div class="budget-chart-legend" id="budgetChartLegend"></div>
+          </div>
+        </div>
+
+        <div class="budget-section-title">今日流水</div>
+        <div id="budgetRecords"></div>
+        <div class="empty-state" id="budgetEmpty" style="display:none">
+          <div class="empty-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          </div>
+          <div class="empty-text">今天还没有消费记录</div>
+        </div>
+
+        <button class="diet-fab" onclick="openBudgetModal()" title="记一笔">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+      </div>
+
       </div>
 
       <!-- Summary page -->
@@ -2714,6 +3445,60 @@
     </div>
         </div>
       </div>
+
+      <!-- Budget Summary page -->
+      <div class="page page-summary" id="budgetSummaryPage">
+        <div class="summary-page-header">
+          <button class="icon-btn summary-back-btn" onclick="toggleBudgetSummary()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          </button>
+          <span class="summary-page-title">生活费归纳</span>
+          <div style="width:32px"></div>
+        </div>
+        <div class="summary-page-content" id="budgetSummaryContent">
+
+          <!-- 本月支出分布饼图 -->
+          <div class="summary-section">
+            <div class="summary-section-title">本月支出分布</div>
+            <div class="budget-sum-chart-card">
+              <div class="budget-chart-wrap">
+                <canvas id="budgetSumPieChart" width="200" height="200"></canvas>
+              </div>
+              <div class="budget-chart-legend" id="budgetSumChartLegend"></div>
+            </div>
+          </div>
+
+          <!-- 本月概览日历 -->
+          <div class="summary-section">
+            <div class="summary-section-title">本月概览</div>
+            <div class="summary-cal-header">
+              <button class="summary-cal-nav" onclick="budgetSumChangeMonth(-1)">&#8249;</button>
+              <span class="summary-cal-title" id="budgetSumCalTitle">2026年10月</span>
+              <button class="summary-cal-nav" onclick="budgetSumChangeMonth(1)">&#8250;</button>
+            </div>
+            <div class="summary-cal-weekdays" id="budgetSumCalWeekdays"></div>
+            <div class="summary-cal-grid" id="budgetSumCalGrid"></div>
+          </div>
+
+          <!-- 本月统计 -->
+          <div class="summary-month-stats">
+            <div class="summary-stat-card">
+              <div class="summary-stat-num" id="budgetSumTotal">0</div>
+              <div class="summary-stat-label">总支出</div>
+            </div>
+            <div class="summary-stat-card">
+              <div class="summary-stat-num" id="budgetSumSavings">0</div>
+              <div class="summary-stat-label">总存钱</div>
+            </div>
+            <div class="summary-stat-card">
+              <div class="summary-stat-num" id="budgetSumDays">0</div>
+              <div class="summary-stat-label">消费天数</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
@@ -2826,10 +3611,82 @@
         <label>项目名称</label>
         <input type="text" class="text-input" style="background:#fff" id="newCheckinItemName" placeholder="例如：早起、运动、读书..." maxlength="20" onkeydown="if(event.key==='Enter')addCheckinItem()">
       </div>
+      <div class="input-group">
+        <label>打卡周期</label>
+        <div class="option-row" id="periodOptions">
+          <div class="option-chip selected" data-period="daily" onclick="selectPeriod('daily')">每日</div>
+          <div class="option-chip" data-period="weekly" onclick="selectPeriod('weekly')">每周</div>
+          <div class="option-chip" data-period="custom" onclick="selectPeriod('custom')">自定义</div>
+        </div>
+      </div>
+      <div class="input-group" id="weeklyCountGroup" style="display:none">
+        <label>每周打卡次数</label>
+        <input type="number" class="text-input" style="background:#fff" id="weeklyCount" value="1" min="1" max="7">
+      </div>
+      <div id="customPeriodGroup" style="display:none">
+        <div class="input-group">
+          <label>开始日期</label>
+          <input type="date" class="text-input" style="background:#fff" id="customStartDate">
+        </div>
+        <div class="input-group">
+          <label>结束日期</label>
+          <input type="date" class="text-input" style="background:#fff" id="customEndDate">
+        </div>
+        <div class="input-group">
+          <label>目标次数</label>
+          <input type="number" class="text-input" style="background:#fff" id="customGoal" value="1" min="1">
+        </div>
+      </div>
     </div>
     <div class="modal-footer" style="display:flex;justify-content:center;gap:10px;padding-top:0">
       <button class="btn btn-cancel" style="flex:none;padding:10px 20px;background:#fff;color:var(--primary);border:1px solid var(--primary)" onclick="closeAddCheckinItemModal()">取消</button>
       <button class="btn btn-confirm" style="flex:none;padding:10px 20px;background:#fff;color:var(--primary);border:1px solid var(--primary)" onclick="addCheckinItem()">确定</button>
+    </div>
+  </div>
+</div>
+
+<!-- Edit Checkin Item Modal -->
+<div class="modal-overlay" id="editCheckinItemModal" onclick="closeEditCheckinItemModal(event)">
+  <div class="modal" onclick="event.stopPropagation()">
+    <div class="modal-header">
+      <span class="modal-title">编辑打卡项目</span>
+    </div>
+    <div class="modal-body">
+      <input type="hidden" id="editCheckinItemId">
+      <div class="input-group">
+        <label>项目名称</label>
+        <input type="text" class="text-input" style="background:#fff" id="editCheckinItemName" placeholder="例如：早起、运动、读书..." maxlength="20" onkeydown="if(event.key==='Enter')saveEditCheckinItem()">
+      </div>
+      <div class="input-group">
+        <label>打卡周期</label>
+        <div class="option-row" id="editPeriodOptions">
+          <div class="option-chip selected" data-period="daily" onclick="selectEditPeriod('daily')">每日</div>
+          <div class="option-chip" data-period="weekly" onclick="selectEditPeriod('weekly')">每周</div>
+          <div class="option-chip" data-period="custom" onclick="selectEditPeriod('custom')">自定义</div>
+        </div>
+      </div>
+      <div class="input-group" id="editWeeklyCountGroup" style="display:none">
+        <label>每周打卡次数</label>
+        <input type="number" class="text-input" style="background:#fff" id="editWeeklyCount" value="1" min="1" max="7">
+      </div>
+      <div id="editCustomPeriodGroup" style="display:none">
+        <div class="input-group">
+          <label>开始日期</label>
+          <input type="date" class="text-input" style="background:#fff" id="editCustomStartDate">
+        </div>
+        <div class="input-group">
+          <label>结束日期</label>
+          <input type="date" class="text-input" style="background:#fff" id="editCustomEndDate">
+        </div>
+        <div class="input-group">
+          <label>目标次数</label>
+          <input type="number" class="text-input" style="background:#fff" id="editCustomGoal" value="1" min="1">
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer" style="display:flex;justify-content:center;gap:10px;padding-top:0">
+      <button class="btn btn-cancel" style="flex:none;padding:10px 20px;background:#fff;color:var(--primary);border:1px solid var(--primary)" onclick="closeEditCheckinItemModal()">取消</button>
+      <button class="btn btn-confirm" style="flex:none;padding:10px 20px;background:#fff;color:var(--primary);border:1px solid var(--primary)" onclick="saveEditCheckinItem()">保存</button>
     </div>
   </div>
 </div>
@@ -2844,6 +3701,91 @@
   </div>
 </div>
 
+<!-- Budget Modal -->
+<div class="modal-overlay" id="budgetModal" onclick="closeBudgetModal(event)">
+  <div class="modal" onclick="event.stopPropagation()">
+    <div class="modal-title" id="budgetModalTitle">记一笔</div>
+
+    <div class="input-group">
+      <label>名称</label>
+      <input type="text" class="text-input" id="budgetNote" placeholder="例如：护肤品、打车..." maxlength="50">
+    </div>
+
+    <div class="input-group">
+      <label>金额</label>
+      <input type="number" class="text-input" id="budgetAmount" placeholder="0.00" step="0.01" min="0">
+    </div>
+
+    <div class="budget-type-toggle">
+      <button class="budget-type-btn active" data-type="expense" onclick="selectBudgetType('expense', this)">支出</button>
+      <button class="budget-type-btn" data-type="income" onclick="selectBudgetType('income', this)">收入</button>
+    </div>
+
+    <div class="input-group">
+      <label>分类</label>
+      <div class="budget-cat-grid" id="budgetCatGrid">
+        <button class="budget-cat-btn active" data-cat="transport" onclick="selectBudgetCat('transport', this)">
+          <span class="budget-cat-icon">🚗</span>
+          <span class="budget-cat-label">交通</span>
+        </button>
+        <button class="budget-cat-btn" data-cat="shopping" onclick="selectBudgetCat('shopping', this)">
+          <span class="budget-cat-icon">🛍️</span>
+          <span class="budget-cat-label">购物</span>
+        </button>
+        <button class="budget-cat-btn" data-cat="entertainment" onclick="selectBudgetCat('entertainment', this)">
+          <span class="budget-cat-icon">🎮</span>
+          <span class="budget-cat-label">娱乐</span>
+        </button>
+        <button class="budget-cat-btn" data-cat="savings" onclick="selectBudgetCat('savings', this)">
+          <span class="budget-cat-icon">💰</span>
+          <span class="budget-cat-label">存钱</span>
+        </button>
+        <button class="budget-cat-btn" data-cat="other" onclick="selectBudgetCat('other', this)">
+          <span class="budget-cat-icon">📦</span>
+          <span class="budget-cat-label">其他</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn btn-cancel" onclick="closeBudgetModal()">取消</button>
+      <button class="btn btn-confirm" onclick="addBudgetRecord()">确认</button>
+    </div>
+  </div>
+</div>
+
+<!-- Diet Modal -->
+<div class="modal-overlay" id="dietModal" onclick="closeDietModal(event)">
+  <div class="modal" onclick="event.stopPropagation()">
+    <div class="modal-title">添加饮食记录</div>
+
+    <div class="input-group">
+      <label>吃了什么</label>
+      <input type="text" class="text-input" id="dietModalContent" placeholder="例如：牛肉面、奶茶..." maxlength="100">
+    </div>
+
+    <div class="input-group">
+      <label>价格（元）</label>
+      <input type="number" class="text-input" id="dietModalPrice" placeholder="0.00" step="0.01" min="0">
+    </div>
+
+    <div class="input-group">
+      <label>分类</label>
+      <div class="diet-cat-row">
+        <button class="diet-cat-btn breakfast active" data-meal="breakfast" onclick="selectDietMeal('breakfast', this)">早餐</button>
+        <button class="diet-cat-btn lunch" data-meal="lunch" onclick="selectDietMeal('lunch', this)">午餐</button>
+        <button class="diet-cat-btn dinner" data-meal="dinner" onclick="selectDietMeal('dinner', this)">晚餐</button>
+        <button class="diet-cat-btn extra" data-meal="extra" onclick="selectDietMeal('extra', this)">加餐</button>
+      </div>
+    </div>
+
+    <div class="modal-actions diet-modal-actions">
+      <button class="btn btn-cancel" onclick="closeDietModal()">取消</button>
+      <button class="btn btn-confirm" onclick="addDietRecord()">确定</button>
+    </div>
+  </div>
+</div>
+
 <style>
   @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
 </style>
@@ -2852,6 +3794,9 @@
   // ====== Data ======
   let events = JSON.parse(localStorage.getItem('wb_events') || '[]');
   let inspirations = JSON.parse(localStorage.getItem('wb_inspirations') || '[]');
+  let dietRecords = JSON.parse(localStorage.getItem('dietRecords') || '[]');
+  let budgetRecords = JSON.parse(localStorage.getItem('budgetRecords') || '[]');
+  let budgetSettings = JSON.parse(localStorage.getItem('budgetSettings') || '{"monthlyBudget":2000}');
   let currentDate = formatDate(new Date());
   let calendarMonth = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
   let calendarOpen = false;
@@ -2859,6 +3804,7 @@
   let selectedForDelete = new Set();
   let summaryMonth = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
   let summarySelectedDate = formatDate(new Date());
+  let budgetSummaryMonth = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
   let currentView = 'schedule';
   let editingEventId = null;
   let editingInspId = null;
@@ -2868,6 +3814,10 @@
   let selectedEditTag = 'feeling';
   let currentFilter = 'all';
   let actionTarget = null;
+  let currentDietMeal = 'breakfast';
+  let budgetType = 'expense';
+  let budgetCat = 'transport';
+  let expandedDietDates = new Set();
 
   function formatDate(d) {
     const y = d.getFullYear();
@@ -2883,6 +3833,9 @@
   function save() {
     localStorage.setItem('wb_events', JSON.stringify(events));
     localStorage.setItem('wb_inspirations', JSON.stringify(inspirations));
+    localStorage.setItem('dietRecords', JSON.stringify(dietRecords));
+    localStorage.setItem('budgetRecords', JSON.stringify(budgetRecords));
+    localStorage.setItem('budgetSettings', JSON.stringify(budgetSettings));
   }
 
   function escapeHtml(str) {
@@ -2904,33 +3857,56 @@
     document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
     document.getElementById(`view-${view}`).classList.add('active');
 
-    const titles = { schedule: '日程安排', inspiration: '灵感', checkin: '打卡' };
+    const titles = { schedule: '日程安排', inspiration: '灵感', checkin: '打卡', diet: '饮食', budget: '生活费' };
     document.getElementById('pageTitle').textContent = titles[view];
 
     // Toggle header buttons
     const addBtn = document.querySelector('.header-actions [onclick="openScheduleModal()"]');
     const archiveBtn = document.getElementById('archiveBtn');
     const summaryBtn = document.getElementById('summaryBtn');
+    const budgetSummaryBtn = document.getElementById('budgetSummaryBtn');
 
     if (view === 'schedule') {
       addBtn.style.display = 'flex';
       archiveBtn.style.display = 'none';
       summaryBtn.style.display = 'flex';
+      budgetSummaryBtn.style.display = 'none';
     } else if (view === 'inspiration') {
       addBtn.style.display = 'none';
       archiveBtn.style.display = 'flex';
       summaryBtn.style.display = 'none';
+      budgetSummaryBtn.style.display = 'none';
+    } else if (view === 'budget') {
+      addBtn.style.display = 'none';
+      archiveBtn.style.display = 'none';
+      summaryBtn.style.display = 'none';
+      budgetSummaryBtn.style.display = 'flex';
     } else {
       addBtn.style.display = 'none';
       archiveBtn.style.display = 'none';
       summaryBtn.style.display = 'none';
+      budgetSummaryBtn.style.display = 'none';
     }
 
     if (window.innerWidth <= 768) closeSidebar();
 
+    // 关闭所有归纳页，确保主页显示
+    const pageHome = document.getElementById('pageHome');
+    const pageSummary = document.getElementById('pageSummary');
+    const budgetSumPage = document.getElementById('budgetSummaryPage');
+    if (pageSummary) pageSummary.classList.remove('active');
+    if (budgetSumPage) budgetSumPage.classList.remove('active');
+    if (pageHome) pageHome.classList.add('active');
+    const sumBtn = document.getElementById('summaryBtn');
+    const budgetSumBtn = document.getElementById('budgetSummaryBtn');
+    if (sumBtn) sumBtn.classList.remove('active');
+    if (budgetSumBtn) budgetSumBtn.classList.remove('active');
+
     if (view === 'schedule') { renderSchedule(); }
     else if (view === 'inspiration') renderInspirations();
     else if (view === 'checkin') renderCheckin();
+    else if (view === 'diet') renderDiet();
+    else if (view === 'budget') renderBudget();
   }
 
   function toggleSidebar() {
@@ -3973,8 +4949,93 @@
 
   function openAddCheckinItemModal() {
     document.getElementById('newCheckinItemName').value = '';
+    // Reset period to daily
+    selectPeriod('daily');
+    document.getElementById('weeklyCount').value = 1;
+    const today = formatCheckinDate(new Date());
+    document.getElementById('customStartDate').value = today;
+    document.getElementById('customEndDate').value = today;
+    document.getElementById('customGoal').value = 1;
     document.getElementById('addCheckinItemModal').classList.add('show');
     setTimeout(() => document.getElementById('newCheckinItemName').focus(), 100);
+  }
+
+  function selectPeriod(period) {
+    document.querySelectorAll('#periodOptions .option-chip').forEach(chip => {
+      chip.classList.toggle('selected', chip.dataset.period === period);
+    });
+    document.getElementById('weeklyCountGroup').style.display = period === 'weekly' ? 'block' : 'none';
+    document.getElementById('customPeriodGroup').style.display = period === 'custom' ? 'block' : 'none';
+  }
+
+  function getSelectedPeriod() {
+    const selected = document.querySelector('#periodOptions .option-chip.selected');
+    return selected ? selected.dataset.period : 'daily';
+  }
+
+  // 获取某个日期所在周的起止日期（周一到周日）
+  function getWeekRange(date) {
+    const d = new Date(date);
+    const day = d.getDay(); // 0=周日, 1=周一, ... 6=周六
+    const diff = day === 0 ? 6 : day - 1; // 距离周一的天数
+    const monday = new Date(d);
+    monday.setDate(d.getDate() - diff);
+    monday.setHours(0, 0, 0, 0);
+    const sunday = new Date(monday);
+    sunday.setDate(monday.getDate() + 6);
+    sunday.setHours(23, 59, 59, 999);
+    return {
+      start: formatCheckinDate(monday),
+      end: formatCheckinDate(sunday)
+    };
+  }
+
+  // 获取某周内某个项目的打卡次数
+  function getWeekCheckinCount(itemId, date) {
+    const range = getWeekRange(date);
+    let count = 0;
+    const start = new Date(range.start);
+    const end = new Date(range.end);
+    for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
+      const dateStr = formatCheckinDate(d);
+      if (checkinRecords[dateStr] && checkinRecords[dateStr].includes(itemId)) {
+        count++;
+      }
+    }
+    return count;
+  }
+
+  // 获取某个周期内的打卡次数
+  function getPeriodCheckinCount(itemId, startDateStr, endDateStr) {
+    let count = 0;
+    const start = new Date(startDateStr);
+    const end = new Date(endDateStr);
+    for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
+      const dateStr = formatCheckinDate(d);
+      if (checkinRecords[dateStr] && checkinRecords[dateStr].includes(itemId)) {
+        count++;
+      }
+    }
+    return count;
+  }
+
+  // 判断某个项目在当前周期是否已完成
+  function isPeriodCompleted(item, date) {
+    const period = item.period || 'daily';
+    if (period === 'daily') {
+      const dateStr = formatCheckinDate(date);
+      return checkinRecords[dateStr] && checkinRecords[dateStr].includes(item.id);
+    } else if (period === 'weekly') {
+      const count = getWeekCheckinCount(item.id, date);
+      return count >= (item.weeklyCount || 1);
+    } else if (period === 'custom') {
+      // 检查当前日期是否在自定义周期内
+      const todayStr = formatCheckinDate(date);
+      if (todayStr < item.customStart || todayStr > item.customEnd) return false;
+      const count = getPeriodCheckinCount(item.id, item.customStart, item.customEnd);
+      return count >= (item.customGoal || 1);
+    }
+    return false;
   }
 
   function closeAddCheckinItemModal(e) {
@@ -3985,11 +5046,32 @@
   function addCheckinItem() {
     const name = document.getElementById('newCheckinItemName').value.trim();
     if (!name) return;
-    checkinItems.push({
+    const period = getSelectedPeriod();
+    const item = {
       id: Date.now().toString(),
       name: name,
-      createdAt: new Date().toISOString()
-    });
+      createdAt: new Date().toISOString(),
+      period: period
+    };
+    if (period === 'weekly') {
+      item.weeklyCount = parseInt(document.getElementById('weeklyCount').value) || 1;
+    } else if (period === 'custom') {
+      const start = document.getElementById('customStartDate').value;
+      const end = document.getElementById('customEndDate').value;
+      const goal = parseInt(document.getElementById('customGoal').value) || 1;
+      if (!start || !end) {
+        alert('请填写开始和结束日期');
+        return;
+      }
+      if (start > end) {
+        alert('开始日期不能晚于结束日期');
+        return;
+      }
+      item.customStart = start;
+      item.customEnd = end;
+      item.customGoal = goal;
+    }
+    checkinItems.push(item);
     saveCheckin();
     closeAddCheckinItemModal();
     renderCheckin();
@@ -4007,14 +5089,108 @@
     renderCheckin();
   }
 
+  function openEditCheckinItemModal(itemId) {
+    const item = checkinItems.find(i => i.id === itemId);
+    if (!item) return;
+
+    document.getElementById('editCheckinItemId').value = itemId;
+    document.getElementById('editCheckinItemName').value = item.name;
+
+    const period = item.period || 'daily';
+    selectEditPeriod(period);
+
+    if (period === 'weekly') {
+      document.getElementById('editWeeklyCount').value = item.weeklyCount || 1;
+    } else if (period === 'custom') {
+      document.getElementById('editCustomStartDate').value = item.customStart || '';
+      document.getElementById('editCustomEndDate').value = item.customEnd || '';
+      document.getElementById('editCustomGoal').value = item.customGoal || 1;
+    }
+
+    document.getElementById('editCheckinItemModal').classList.add('show');
+    setTimeout(() => document.getElementById('editCheckinItemName').focus(), 100);
+  }
+
+  function closeEditCheckinItemModal(e) {
+    if (e && e.target !== e.currentTarget) return;
+    document.getElementById('editCheckinItemModal').classList.remove('show');
+  }
+
+  function selectEditPeriod(period) {
+    const options = document.querySelectorAll('#editPeriodOptions .option-chip');
+    options.forEach(o => o.classList.toggle('selected', o.dataset.period === period));
+    document.getElementById('editWeeklyCountGroup').style.display = period === 'weekly' ? 'block' : 'none';
+    document.getElementById('editCustomPeriodGroup').style.display = period === 'custom' ? 'block' : 'none';
+  }
+
+  function saveEditCheckinItem() {
+    const id = document.getElementById('editCheckinItemId').value;
+    const name = document.getElementById('editCheckinItemName').value.trim();
+    if (!name) return;
+
+    const item = checkinItems.find(i => i.id === id);
+    if (!item) return;
+
+    const selectedPeriod = document.querySelector('#editPeriodOptions .option-chip.selected')?.dataset.period || 'daily';
+
+    item.name = name;
+    item.period = selectedPeriod;
+
+    if (selectedPeriod === 'weekly') {
+      item.weeklyCount = parseInt(document.getElementById('editWeeklyCount').value) || 1;
+      delete item.customStart;
+      delete item.customEnd;
+      delete item.customGoal;
+    } else if (selectedPeriod === 'custom') {
+      const start = document.getElementById('editCustomStartDate').value;
+      const end = document.getElementById('editCustomEndDate').value;
+      const goal = parseInt(document.getElementById('editCustomGoal').value) || 1;
+      if (!start || !end) { alert('请填写开始和结束日期'); return; }
+      if (start > end) { alert('开始日期不能晚于结束日期'); return; }
+      item.customStart = start;
+      item.customEnd = end;
+      item.customGoal = goal;
+      delete item.weeklyCount;
+    } else {
+      delete item.weeklyCount;
+      delete item.customStart;
+      delete item.customEnd;
+      delete item.customGoal;
+    }
+
+    saveCheckin();
+    closeEditCheckinItemModal();
+    renderCheckin();
+  }
+
   function toggleCheckin(itemId) {
     const todayStr = formatCheckinDate(new Date());
+    const item = checkinItems.find(i => i.id === itemId);
+    if (!item) return;
+
+    const period = item.period || 'daily';
     if (!checkinRecords[todayStr]) checkinRecords[todayStr] = [];
     const idx = checkinRecords[todayStr].indexOf(itemId);
-    if (idx > -1) {
+    const hasTodayCheckin = idx > -1;
+
+    // 如果今天已打卡，要取消打卡
+    if (hasTodayCheckin) {
+      // 检查当前周期是否已完成
+      const completed = isPeriodCompleted(item, new Date());
+      if (completed) {
+        if (!confirm('本周期已完成，确认取消打卡吗？')) return;
+      }
       checkinRecords[todayStr].splice(idx, 1);
       if (checkinRecords[todayStr].length === 0) delete checkinRecords[todayStr];
     } else {
+      // 今天还没打卡，添加打卡
+      // 对于自定义类型，检查是否在周期内
+      if (period === 'custom') {
+        if (todayStr < item.customStart || todayStr > item.customEnd) {
+          alert('不在打卡周期内');
+          return;
+        }
+      }
       checkinRecords[todayStr].push(itemId);
     }
     saveCheckin();
@@ -4022,19 +5198,83 @@
   }
 
   function calcItemStreak(itemId) {
-    let streak = 0;
-    const today = new Date();
-    for (let i = 0; i < 365; i++) {
-      const d = new Date(today);
-      d.setDate(d.getDate() - i);
-      const dateStr = formatCheckinDate(d);
-      if (checkinRecords[dateStr] && checkinRecords[dateStr].includes(itemId)) {
-        streak++;
-      } else {
-        break;
+    const item = checkinItems.find(i => i.id === itemId);
+    if (!item) return 0;
+    const period = item.period || 'daily';
+
+    if (period === 'daily') {
+      let streak = 0;
+      const today = new Date();
+      for (let i = 0; i < 365; i++) {
+        const d = new Date(today);
+        d.setDate(d.getDate() - i);
+        const dateStr = formatCheckinDate(d);
+        if (checkinRecords[dateStr] && checkinRecords[dateStr].includes(itemId)) {
+          streak++;
+        } else {
+          break;
+        }
       }
+      return streak;
+    } else if (period === 'weekly') {
+      // 计算连续完成了多少周
+      let streak = 0;
+      const goal = item.weeklyCount || 1;
+      const today = new Date();
+      // 从本周开始往前数
+      for (let i = 0; i < 520; i++) {
+        const d = new Date(today);
+        d.setDate(d.getDate() - i * 7);
+        const count = getWeekCheckinCount(itemId, d);
+        if (count >= goal) {
+          streak++;
+        } else {
+          // 如果是本周（i=0），即使没完成也继续往前数上周
+          if (i === 0) continue;
+          break;
+        }
+      }
+      return streak;
     }
-    return streak;
+    // custom 类型不计算连续天数
+    return 0;
+  }
+
+  // 获取打卡项目的显示文本
+  function getItemStreakText(item) {
+    const period = item.period || 'daily';
+    const today = new Date();
+
+    if (period === 'daily') {
+      const streak = calcItemStreak(item.id);
+      return `连续打卡 ${streak} 天`;
+    } else if (period === 'weekly') {
+      const count = getWeekCheckinCount(item.id, today);
+      const goal = item.weeklyCount || 1;
+      const completed = count >= goal;
+      if (completed) {
+        return `本周 ${count}/${goal} 次 · 已完成`;
+      }
+      return `本周 ${count}/${goal} 次`;
+    } else if (period === 'custom') {
+      const todayStr = formatCheckinDate(today);
+      // 检查是否在周期内
+      if (todayStr < item.customStart) {
+        return `未开始（${item.customStart} 起）`;
+      }
+      if (todayStr > item.customEnd) {
+        const count = getPeriodCheckinCount(item.id, item.customStart, item.customEnd);
+        return `已结束（${count}/${item.customGoal} 次）`;
+      }
+      const count = getPeriodCheckinCount(item.id, item.customStart, item.customEnd);
+      const goal = item.customGoal || 1;
+      const completed = count >= goal;
+      if (completed) {
+        return `周期内 ${count}/${goal} 次 · 已完成`;
+      }
+      return `周期内 ${count}/${goal} 次`;
+    }
+    return '';
   }
 
   function changeCheckinMonth(delta) {
@@ -4081,12 +5321,25 @@
       num.textContent = d;
       cell.appendChild(num);
 
-      const checked = checkinRecords[dateStr] || [];
+      const checkedToday = checkinRecords[dateStr] || [];
       const total = checkinItems.length;
-      if (total > 0 && checked.length > 0) {
+
+      // 只要当天有任何打卡记录（不管什么类型），就显示圆点
+      if (total > 0 && checkedToday.length > 0) {
         const dot = document.createElement('span');
         dot.className = 'cal-day-dot';
-        if (checked.length === total) {
+        // 全部完成的判断：每日项目全打了 + 周期类项目本周/周期内已达标
+        const dateObj = new Date(dateStr);
+        let allCompleted = true;
+        let hasAnyCheckin = false;
+        for (const item of checkinItems) {
+          if (isPeriodCompleted(item, dateObj)) {
+            hasAnyCheckin = true;
+          } else {
+            allCompleted = false;
+          }
+        }
+        if (allCompleted && total > 0) {
           cell.classList.add('checked');
         } else {
           cell.classList.add('partial');
@@ -4121,23 +5374,34 @@
     }
 
     const todayStr = formatCheckinDate(new Date());
-    const todayChecked = checkinRecords[todayStr] || [];
+    const today = new Date();
 
     container.innerHTML = '';
     checkinItems.forEach(item => {
-      const isChecked = todayChecked.includes(item.id);
-      const streak = calcItemStreak(item.id);
+      const period = item.period || 'daily';
+      const isTodayChecked = checkinRecords[todayStr] && checkinRecords[todayStr].includes(item.id);
+      const periodCompleted = isPeriodCompleted(item, today);
+      const streakText = getItemStreakText(item);
+      const isCompleted = period === 'daily' ? isTodayChecked : periodCompleted;
+
+      const classes = ['checkin-item'];
+      if (isTodayChecked) classes.push('checked');
+      if (periodCompleted && period !== 'daily') classes.push('period-completed');
+
+      const streakClasses = ['checkin-item-streak'];
+      if (periodCompleted) streakClasses.push('completed');
+
       const div = document.createElement('div');
-      div.className = 'checkin-item' + (isChecked ? ' checked' : '');
+      div.className = classes.join(' ');
       div.innerHTML = `
-        <div class="checkin-item-checkbox" onclick="toggleCheckin('${item.id}')">
+        <div class="checkin-item-checkbox" onclick="event.stopPropagation(); toggleCheckin('${item.id}')">
           <svg viewBox="0 0 24 24" fill="none"><polyline points="20 6 9 17 4 12"/></svg>
         </div>
-        <div class="checkin-item-info" onclick="toggleCheckin('${item.id}')">
+        <div class="checkin-item-info" onclick="event.stopPropagation(); openEditCheckinItemModal('${item.id}')">
           <div class="checkin-item-name">${item.name}</div>
-          <div class="checkin-item-streak">连续打卡 ${streak} 天</div>
+          <div class="${streakClasses.join(' ')}">${streakText}</div>
         </div>
-        <button class="checkin-item-delete" onclick="deleteCheckinItem('${item.id}')">
+        <button class="checkin-item-delete" onclick="event.stopPropagation(); deleteCheckinItem('${item.id}')">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-2 14a2 2 0 01-2 2H9a2 2 0 01-2-2L5 6"/></svg>
         </button>
       `;
@@ -4153,17 +5417,838 @@
     if (dateEl) dateEl.textContent = `${today.getFullYear()}年${today.getMonth() + 1}月${today.getDate()}日 ${weekday}`;
 
     const total = checkinItems.length;
-    const checked = (checkinRecords[todayStr] || []).length;
+    // 计算今日完成数：每日项目今天打了就算完成，周期类项目本周/周期内达标就算完成
+    let completedCount = 0;
+    checkinItems.forEach(item => {
+      if (isPeriodCompleted(item, today)) {
+        completedCount++;
+      }
+    });
 
     const streakEl = document.getElementById('streakNum');
-    if (streakEl) streakEl.textContent = checked;
+    if (streakEl) streakEl.textContent = completedCount;
 
     const progressEl = document.getElementById('checkinProgress');
-    if (progressEl) progressEl.textContent = `${checked} / ${total}`;
+    if (progressEl) progressEl.textContent = `${completedCount} / ${total}`;
 
     checkinMonth = new Date();
     renderCheckinItems();
     renderCheckinCalendar();
+  }
+
+  // ====== Diet ======
+  const mealNames = { breakfast: '早餐', lunch: '午餐', dinner: '晚餐', extra: '加餐' };
+  const mealColors = {
+    breakfast: '#ff9f0a',
+    lunch: '#34c759',
+    dinner: '#b8a5d9',
+    extra: '#7ba7d9'
+  };
+
+  function getDietRecordsByDate(date) {
+    return dietRecords.filter(r => r.date === date);
+  }
+
+  function getDietTotalByDate(date) {
+    return getDietRecordsByDate(date).reduce((sum, r) => sum + (Number(r.price) || 0), 0);
+  }
+
+  function selectDietMeal(meal, btn) {
+    currentDietMeal = meal;
+    document.querySelectorAll('.diet-cat-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+  }
+
+  function renderDiet() {
+    const today = new Date();
+    const weekdays = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+    const dateHeader = document.getElementById('dietDateHeader');
+    if (dateHeader) {
+      dateHeader.textContent = `${today.getFullYear()}年${today.getMonth() + 1}月${today.getDate()}日 ${weekdays[today.getDay()]}`;
+    }
+
+    const todayStr = formatDate(today);
+    const todayRecords = getDietRecordsByDate(todayStr);
+
+    // Update summary total
+    const totalEl = document.getElementById('dietTotalAmount');
+    if (totalEl) {
+      const total = getDietTotalByDate(todayStr);
+      totalEl.textContent = `¥${total.toFixed(2)}`;
+    }
+
+    // Sort by time desc
+    todayRecords.sort((a, b) => b.time.localeCompare(a.time));
+
+    const list = document.getElementById('dietList');
+    const empty = document.getElementById('dietEmpty');
+
+    if (!list || !empty) return;
+
+    if (todayRecords.length === 0) {
+      list.innerHTML = '';
+      empty.style.display = 'block';
+      return;
+    }
+
+    empty.style.display = 'none';
+    list.innerHTML = '';
+
+    todayRecords.forEach(record => {
+      const price = Number(record.price) || 0;
+      const card = document.createElement('div');
+      card.className = `diet-card meal-${record.mealType}`;
+      card.innerHTML = `
+        <div class="diet-card-body">
+          <span class="diet-meal-tag meal-${record.mealType}">${mealNames[record.mealType] || record.mealType}</span>
+          <div class="diet-card-content">${escapeHtml(record.content)}</div>
+          <div class="diet-card-right">
+            <span class="diet-price">¥${price.toFixed(2)}</span>
+            <button class="diet-delete-btn" onclick="deleteDietRecord('${record.id}')" title="删除">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a1 1 0 011-1h6a1 1 0 011 1v2m3 0v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="diet-time">${record.time}</div>
+      `;
+      list.appendChild(card);
+    });
+  }
+
+  function openDietModal() {
+    currentDietMeal = 'breakfast';
+    document.getElementById('dietModalContent').value = '';
+    document.getElementById('dietModalPrice').value = '';
+
+    document.querySelectorAll('.diet-cat-btn').forEach(b => {
+      b.classList.toggle('active', b.dataset.meal === 'breakfast');
+    });
+
+    document.getElementById('dietModal').classList.add('show');
+    setTimeout(() => document.getElementById('dietModalContent').focus(), 200);
+  }
+
+  function closeDietModal(event) {
+    if (event && event.target !== event.currentTarget) return;
+    document.getElementById('dietModal').classList.remove('show');
+  }
+
+  function addDietRecord() {
+    const content = document.getElementById('dietModalContent').value.trim();
+    const price = parseFloat(document.getElementById('dietModalPrice').value);
+
+    if (!content) {
+      alert('请输入吃了什么');
+      return;
+    }
+    if (isNaN(price) || price < 0) {
+      alert('请输入有效价格');
+      return;
+    }
+
+    const now = new Date();
+    const record = {
+      id: genId(),
+      date: formatDate(now),
+      mealType: currentDietMeal,
+      content: content,
+      price: price.toFixed(2),
+      time: `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`
+    };
+
+    dietRecords.push(record);
+    save();
+    closeDietModal();
+    renderDiet();
+    syncBudgetFromDiet();
+  }
+
+  function deleteDietRecord(id) {
+    if (!confirm('确定删除这条饮食记录吗？')) return;
+    dietRecords = dietRecords.filter(r => r.id !== id);
+    save();
+    renderDiet();
+    syncBudgetFromDiet();
+  }
+
+  function syncBudgetFromDiet() {
+    // 饮食数据是动态计算的，不需要实际修改 budgetRecords
+    // 只需要重新渲染生活费页面即可
+    if (currentView === 'budget') {
+      renderBudget();
+      refreshBudgetSummary();
+    }
+  }
+
+  // ====== Budget ======
+  function toggleDietExpand(date) {
+    if (expandedDietDates.has(date)) {
+      expandedDietDates.delete(date);
+    } else {
+      expandedDietDates.add(date);
+    }
+    renderBudget();
+  }
+
+  function renderBudget() {
+    updateBudgetTotal();
+
+    const container = document.getElementById('budgetRecords');
+    const empty = document.getElementById('budgetEmpty');
+    if (!container || !empty) return;
+
+    const todayStr = formatDate(new Date());
+    // 过滤当天记录（排除 food 分类，餐饮由饮食页面管理）
+    const todayRecords = budgetRecords.filter(r => r.date === todayStr && r.category !== 'food');
+    const dietRecordsOfDay = getDietRecordsByDate(todayStr);
+    const dietTotal = getDietTotalByDate(todayStr);
+
+    // 如果今天没有任何消费记录
+    if (todayRecords.length === 0 && dietRecordsOfDay.length === 0) {
+      container.innerHTML = '';
+      empty.style.display = 'block';
+      return;
+    }
+
+    empty.style.display = 'none';
+
+    const catNames = { transport: '交通', shopping: '购物', entertainment: '娱乐', savings: '存钱', other: '其他' };
+    const catIcons = { transport: '🚗', shopping: '🛍️', entertainment: '🎮', savings: '💰', other: '📦' };
+
+    let html = '';
+    const date = todayStr;
+    const isExpanded = expandedDietDates.has(date);
+
+    html += `<div class="budget-record-list">`;
+
+    // 先插入饮食汇总卡片
+    if (dietRecordsOfDay.length > 0) {
+      html += `
+        <div class="budget-record-card diet-summary-card">
+          <div class="budget-record-icon cat-food">🍜</div>
+          <div class="budget-record-info">
+            <div class="budget-record-cat">餐饮（饮食）</div>
+            <div class="budget-record-note">${dietRecordsOfDay.length} 条记录</div>
+          </div>
+          <div class="budget-record-right">
+            <span class="budget-record-amount expense">-¥${dietTotal.toFixed(2)}</span>
+            <button class="budget-diet-expand" onclick="toggleDietExpand('${date}')" title="${isExpanded ? '收起' : '展开'}">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition: transform 0.3s; ${isExpanded ? 'transform: rotate(180deg)' : ''}"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </div>
+        </div>
+      `;
+
+      // 展开的饮食明细
+      if (isExpanded) {
+        dietRecordsOfDay.forEach(dr => {
+          const price = Number(dr.price) || 0;
+          html += `
+            <div class="budget-diet-detail-item">
+              <div class="diet-detail-tag meal-${dr.mealType}">${mealNames[dr.mealType] || dr.mealType}</div>
+              <div class="diet-detail-content">${escapeHtml(dr.content)}</div>
+              <span class="diet-detail-price">-¥${price.toFixed(2)}</span>
+            </div>
+          `;
+        });
+      }
+    }
+
+    // 其他正常记录
+    todayRecords.forEach(r => {
+      const amountStr = r.type === 'expense' ? `-${Number(r.amount).toFixed(2)}` : `+${Number(r.amount).toFixed(2)}`;
+      html += `
+        <div class="budget-record-card">
+          <div class="budget-record-icon cat-${r.category}">${catIcons[r.category] || '📦'}</div>
+          <div class="budget-record-info">
+            <div class="budget-record-cat">${catNames[r.category] || r.category}</div>
+            <div class="budget-record-note">${escapeHtml(r.note || '')}</div>
+          </div>
+          <div class="budget-record-right">
+            <span class="budget-record-amount ${r.type}">${amountStr}</span>
+            <button class="budget-record-delete" onclick="deleteBudgetRecord('${r.id}')" title="删除">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a1 1 0 011-1h6a1 1 0 011 1v2m3 0v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6"/></svg>
+            </button>
+          </div>
+        </div>
+      `;
+    });
+
+    html += `</div>`;
+
+    container.innerHTML = html;
+  }
+
+  function updateBudgetTotal() {
+    const now = new Date();
+    const currentMonth = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
+    const monthRecords = budgetRecords.filter(r => r.date.startsWith(currentMonth) && r.category !== 'food');
+
+    let totalExpense = 0;
+    let totalIncome = 0;
+    monthRecords.forEach(r => {
+      if (r.type === 'expense') totalExpense += Number(r.amount);
+      else totalIncome += Number(r.amount);
+    });
+
+    // 加上当月饮食总花费
+    const monthDietRecords = dietRecords.filter(r => r.date.startsWith(currentMonth));
+    monthDietRecords.forEach(r => {
+      totalExpense += Number(r.price) || 0;
+    });
+
+    const budget = Number(budgetSettings.monthlyBudget) || 0;
+    const remain = budget - totalExpense + totalIncome;
+
+    const totalEl = document.getElementById('budgetTotal');
+    const spentEl = document.getElementById('budgetSpent');
+    const remainEl = document.getElementById('budgetRemain');
+
+    if (totalEl) totalEl.textContent = `¥${budget.toFixed(2)}`;
+    if (spentEl) spentEl.textContent = `¥${totalExpense.toFixed(2)}`;
+    if (remainEl) {
+      remainEl.textContent = `¥${remain.toFixed(2)}`;
+      remainEl.classList.toggle('spent', remain < 0);
+      remainEl.classList.toggle('remain', remain >= 0);
+    }
+  }
+
+  function drawBudgetPieChart() {
+    const canvas = document.getElementById('budgetPieChart');
+    const legendEl = document.getElementById('budgetChartLegend');
+    if (!canvas || !legendEl) return;
+
+    const ctx = canvas.getContext('2d');
+    const now = new Date();
+    const currentMonth = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
+
+    // 计算各分类支出（含饮食）
+    const categoryTotals = {};
+    const catColors = {
+      food: '#5aa897',
+      transport: '#7ba7d9',
+      shopping: '#b8a5d9',
+      entertainment: '#ff9f0a',
+      savings: '#ffc94d',
+      other: '#c9b896'
+    };
+    const catNames = {
+      food: '餐饮',
+      transport: '交通',
+      shopping: '购物',
+      entertainment: '娱乐',
+      savings: '存钱',
+      other: '其他'
+    };
+
+    // 饮食支出
+    const dietMonthRecords = dietRecords.filter(r => r.date.startsWith(currentMonth));
+    const dietTotal = dietMonthRecords.reduce((sum, r) => sum + (Number(r.price) || 0), 0);
+    if (dietTotal > 0) categoryTotals.food = dietTotal;
+
+    // 其他支出（存钱也算支出）
+    budgetRecords.forEach(r => {
+      if (!r.date.startsWith(currentMonth)) return;
+      if (r.type !== 'expense') return;
+      if (r.category === 'food') return; // 餐饮由饮食管理
+      if (!categoryTotals[r.category]) categoryTotals[r.category] = 0;
+      categoryTotals[r.category] += Number(r.amount) || 0;
+    });
+
+    const total = Object.values(categoryTotals).reduce((a, b) => a + b, 0);
+
+    // 清空画布
+    const dpr = window.devicePixelRatio || 1;
+    const size = 200;
+    canvas.width = size * dpr;
+    canvas.height = size * dpr;
+    ctx.scale(dpr, dpr);
+    ctx.clearRect(0, 0, size, size);
+
+    const centerX = size / 2;
+    const centerY = size / 2;
+    const radius = 80;
+    const innerRadius = 50;
+
+    if (total === 0) {
+      // 空状态，画一个灰色圆环
+      ctx.beginPath();
+      ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+      ctx.arc(centerX, centerY, innerRadius, Math.PI * 2, 0, true);
+      ctx.fillStyle = '#eee';
+      ctx.fill();
+      legendEl.innerHTML = '<div style="font-size:13px;color:#999;text-align:center;width:100%">暂无支出记录</div>';
+      return;
+    }
+
+    // 画饼图
+    let startAngle = -Math.PI / 2;
+    const cats = Object.keys(categoryTotals);
+
+    cats.forEach(cat => {
+      const value = categoryTotals[cat];
+      const sliceAngle = (value / total) * Math.PI * 2;
+      const endAngle = startAngle + sliceAngle;
+
+      ctx.beginPath();
+      ctx.moveTo(centerX, centerY);
+      ctx.arc(centerX, centerY, radius, startAngle, endAngle);
+      ctx.closePath();
+      ctx.fillStyle = catColors[cat] || '#ccc';
+      ctx.fill();
+
+      startAngle = endAngle;
+    });
+
+    // 挖空中间（环形图）
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, innerRadius, 0, Math.PI * 2);
+    ctx.fillStyle = '#fff';
+    ctx.fill();
+
+    // 中间文字
+    ctx.fillStyle = '#333';
+    ctx.font = 'bold 18px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(`¥${total.toFixed(0)}`, centerX, centerY - 6);
+    ctx.font = '11px sans-serif';
+    ctx.fillStyle = '#999';
+    ctx.fillText('总支出', centerX, centerY + 14);
+
+    // 图例
+    let legendHtml = '';
+    cats.forEach(cat => {
+      const pct = ((categoryTotals[cat] / total) * 100).toFixed(1);
+      legendHtml += `
+        <div class="chart-legend-item">
+          <span class="chart-legend-dot" style="background:${catColors[cat]}"></span>
+          <span>${catNames[cat] || cat} ${pct}%</span>
+        </div>
+      `;
+    });
+    legendEl.innerHTML = legendHtml;
+  }
+
+  function toggleBudgetChart() {
+    const content = document.getElementById('chartCollapse');
+    const arrow = document.getElementById('chartArrow');
+    if (!content || !arrow) return;
+    const isOpen = content.classList.toggle('open');
+    arrow.classList.toggle('open', isOpen);
+    if (isOpen) {
+      setTimeout(() => drawBudgetPieChart(), 100);
+    }
+  }
+
+  function openBudgetModal() {
+    budgetType = 'expense';
+    budgetCat = 'transport';
+    document.getElementById('budgetAmount').value = '';
+    document.getElementById('budgetNote').value = '';
+
+    document.querySelectorAll('.budget-type-btn').forEach(b => {
+      b.classList.toggle('active', b.dataset.type === 'expense');
+    });
+    document.querySelectorAll('.budget-cat-btn').forEach(b => {
+      b.classList.toggle('active', b.dataset.cat === 'transport');
+    });
+
+    document.getElementById('budgetModal').classList.add('show');
+    setTimeout(() => document.getElementById('budgetNote').focus(), 200);
+  }
+
+  function closeBudgetModal(event) {
+    if (event && event.target !== event.currentTarget) return;
+    document.getElementById('budgetModal').classList.remove('show');
+  }
+
+  function selectBudgetType(type, btn) {
+    budgetType = type;
+    document.querySelectorAll('.budget-type-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+  }
+
+  function selectBudgetCat(cat, btn) {
+    budgetCat = cat;
+    document.querySelectorAll('.budget-cat-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+  }
+
+  function addBudgetRecord() {
+    const amount = parseFloat(document.getElementById('budgetAmount').value);
+    if (!amount || amount <= 0) {
+      alert('请输入有效金额');
+      return;
+    }
+
+    const note = document.getElementById('budgetNote').value.trim();
+    const now = new Date();
+
+    const record = {
+      id: genId(),
+      date: formatDate(now),
+      type: budgetType,
+      category: budgetCat,
+      amount: amount.toFixed(2),
+      note: note
+    };
+
+    budgetRecords.push(record);
+    save();
+    closeBudgetModal();
+    renderBudget();
+    refreshBudgetSummary();
+  }
+
+  function deleteBudgetRecord(id) {
+    if (!confirm('确定删除这条记录吗？')) return;
+    budgetRecords = budgetRecords.filter(r => r.id !== id);
+    save();
+    renderBudget();
+    refreshBudgetSummary();
+  }
+
+  function editBudget() {
+    const current = budgetSettings.monthlyBudget || 2000;
+    const input = prompt('设置本月预算（元）：', current);
+    if (input === null) return;
+    const val = parseFloat(input);
+    if (isNaN(val) || val < 0) {
+      alert('请输入有效金额');
+      return;
+    }
+    budgetSettings.monthlyBudget = val;
+    save();
+    renderBudget();
+  }
+
+  // ====== Budget Summary ======
+  function refreshBudgetSummary() {
+    const sumPage = document.getElementById('budgetSummaryPage');
+    if (sumPage && sumPage.classList.contains('active')) {
+      renderBudgetSummary();
+      requestAnimationFrame(() => drawBudgetSumPieChart());
+    }
+  }
+
+  function toggleBudgetSummary() {
+    const homePage = document.getElementById('pageHome');
+    const summaryPage = document.getElementById('budgetSummaryPage');
+    const btn = document.getElementById('budgetSummaryBtn');
+    const isOpen = summaryPage.classList.contains('active');
+
+    if (isOpen) {
+      summaryPage.classList.remove('active');
+      homePage.classList.add('active');
+      btn.classList.remove('active');
+    } else {
+      budgetSummaryMonth = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
+      renderBudgetSummary();
+      homePage.classList.remove('active');
+      summaryPage.classList.add('active');
+      btn.classList.add('active');
+      requestAnimationFrame(() => {
+        drawBudgetSumPieChart();
+      });
+    }
+  }
+
+  function renderBudgetSummary() {
+    const monthNames = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'];
+    const year = budgetSummaryMonth.getFullYear();
+    const month = budgetSummaryMonth.getMonth();
+    document.getElementById('budgetSumCalTitle').textContent = `${year}年${monthNames[month]}`;
+
+    const monthStr = `${year}-${String(month + 1).padStart(2, '0')}`;
+
+    // 计算当月总支出（含饮食）
+    const monthBudgetRecords = budgetRecords.filter(r => r.date.startsWith(monthStr) && r.category !== 'food');
+    const monthDietRecords = dietRecords.filter(r => r.date.startsWith(monthStr));
+
+    let totalExpense = monthDietRecords.reduce((sum, r) => sum + (Number(r.price) || 0), 0);
+    let totalSavings = 0;
+    monthBudgetRecords.forEach(r => {
+      if (r.type === 'expense') {
+        totalExpense += Number(r.amount);
+        if (r.category === 'savings') totalSavings += Number(r.amount);
+      }
+    });
+
+    // 消费天数
+    const expenseDates = new Set();
+    monthDietRecords.forEach(r => expenseDates.add(r.date));
+    monthBudgetRecords.forEach(r => {
+      if (r.type === 'expense') expenseDates.add(r.date);
+    });
+
+    document.getElementById('budgetSumTotal').textContent = '¥' + totalExpense.toFixed(0);
+    document.getElementById('budgetSumSavings').textContent = '¥' + totalSavings.toFixed(0);
+    document.getElementById('budgetSumDays').textContent = expenseDates.size;
+
+    // 渲染日历
+    renderBudgetSumCalendar();
+  }
+
+  function drawBudgetSumPieChart() {
+    const canvas = document.getElementById('budgetSumPieChart');
+    const legendEl = document.getElementById('budgetSumChartLegend');
+    if (!canvas || !legendEl) return;
+
+    const ctx = canvas.getContext('2d');
+    const year = budgetSummaryMonth.getFullYear();
+    const month = budgetSummaryMonth.getMonth();
+    const monthStr = `${year}-${String(month + 1).padStart(2, '0')}`;
+
+    const categoryTotals = {};
+    const catColors = {
+      food: '#5aa897',
+      transport: '#7ba7d9',
+      shopping: '#b8a5d9',
+      entertainment: '#ff9f0a',
+      savings: '#ffc94d',
+      other: '#c9b896'
+    };
+    const catNames = {
+      food: '餐饮',
+      transport: '交通',
+      shopping: '购物',
+      entertainment: '娱乐',
+      savings: '存钱',
+      other: '其他'
+    };
+
+    // 饮食支出
+    const dietMonthRecords = dietRecords.filter(r => r.date.startsWith(monthStr));
+    const dietTotal = dietMonthRecords.reduce((sum, r) => sum + (Number(r.price) || 0), 0);
+    if (dietTotal > 0) categoryTotals.food = dietTotal;
+
+    // 其他支出（存钱也算支出）
+    budgetRecords.forEach(r => {
+      if (!r.date.startsWith(monthStr)) return;
+      if (r.type !== 'expense') return;
+      if (r.category === 'food') return;
+      if (!categoryTotals[r.category]) categoryTotals[r.category] = 0;
+      categoryTotals[r.category] += Number(r.amount) || 0;
+    });
+
+    const total = Object.values(categoryTotals).reduce((a, b) => a + b, 0);
+
+    const dpr = window.devicePixelRatio || 1;
+    const size = 200;
+    canvas.width = size * dpr;
+    canvas.height = size * dpr;
+    ctx.scale(dpr, dpr);
+    ctx.clearRect(0, 0, size, size);
+
+    const centerX = size / 2;
+    const centerY = size / 2;
+    const radius = 80;
+    const innerRadius = 50;
+
+    if (total === 0) {
+      ctx.beginPath();
+      ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+      ctx.arc(centerX, centerY, innerRadius, Math.PI * 2, 0, true);
+      ctx.fillStyle = '#eee';
+      ctx.fill();
+      legendEl.innerHTML = '<div style="font-size:13px;color:#999;text-align:center;width:100%">暂无支出记录</div>';
+      return;
+    }
+
+    let startAngle = -Math.PI / 2;
+    const cats = Object.keys(categoryTotals);
+
+    cats.forEach(cat => {
+      const value = categoryTotals[cat];
+      const sliceAngle = (value / total) * Math.PI * 2;
+      const endAngle = startAngle + sliceAngle;
+
+      ctx.beginPath();
+      ctx.moveTo(centerX, centerY);
+      ctx.arc(centerX, centerY, radius, startAngle, endAngle);
+      ctx.closePath();
+      ctx.fillStyle = catColors[cat] || '#ccc';
+      ctx.fill();
+
+      startAngle = endAngle;
+    });
+
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, innerRadius, 0, Math.PI * 2);
+    ctx.fillStyle = '#fff';
+    ctx.fill();
+
+    ctx.fillStyle = '#333';
+    ctx.font = 'bold 18px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(`¥${total.toFixed(0)}`, centerX, centerY - 6);
+    ctx.font = '11px sans-serif';
+    ctx.fillStyle = '#999';
+    ctx.fillText('总支出', centerX, centerY + 14);
+
+    let legendHtml = '';
+    cats.forEach(cat => {
+      const pct = ((categoryTotals[cat] / total) * 100).toFixed(1);
+      legendHtml += `
+        <div class="chart-legend-item">
+          <span class="chart-legend-dot" style="background:${catColors[cat]}"></span>
+          <span>${catNames[cat] || cat} ${pct}%</span>
+        </div>
+      `;
+    });
+    legendEl.innerHTML = legendHtml;
+  }
+
+  function renderBudgetSumCalendar() {
+    const year = budgetSummaryMonth.getFullYear();
+    const month = budgetSummaryMonth.getMonth();
+
+    // Weekday labels
+    const wdLabels = ['日', '一', '二', '三', '四', '五', '六'];
+    const wdContainer = document.getElementById('budgetSumCalWeekdays');
+    wdContainer.innerHTML = '';
+    wdLabels.forEach(label => {
+      const el = document.createElement('div');
+      el.className = 'wd-label';
+      el.textContent = label;
+      wdContainer.appendChild(el);
+    });
+
+    // Calendar grid
+    const todayStr = formatDate(new Date());
+    const firstDay = new Date(year, month, 1);
+    const startWeekday = firstDay.getDay();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const prevMonthDays = new Date(year, month, 0).getDate();
+
+    const grid = document.getElementById('budgetSumCalGrid');
+    grid.innerHTML = '';
+
+    // Prev month trailing days
+    for (let i = startWeekday - 1; i >= 0; i--) {
+      const day = prevMonthDays - i;
+      const d = new Date(year, month - 1, day);
+      grid.appendChild(createBudgetSumCalCell(day, d, todayStr, false));
+    }
+
+    // Current month days
+    for (let day = 1; day <= daysInMonth; day++) {
+      const d = new Date(year, month, day);
+      grid.appendChild(createBudgetSumCalCell(day, d, todayStr, true));
+    }
+
+    // Next month leading days
+    const totalCells = grid.children.length;
+    const remaining = (7 - (totalCells % 7)) % 7;
+    for (let i = 1; i <= remaining; i++) {
+      const d = new Date(year, month + 1, i);
+      grid.appendChild(createBudgetSumCalCell(i, d, todayStr, false));
+    }
+  }
+
+  function createBudgetSumCalCell(dayNum, date, todayStr, isCurrentMonth) {
+    const dateStr = formatDate(date);
+    const cell = document.createElement('button');
+    cell.className = 'summary-cal-cell';
+    if (!isCurrentMonth) cell.classList.add('other-month');
+    if (dateStr === todayStr) cell.classList.add('today');
+
+    // 检查当天是否有消费（饮食或支出）
+    const hasDiet = dietRecords.some(r => r.date === dateStr);
+    const hasExpense = budgetRecords.some(r => r.date === dateStr && r.type === 'expense' && r.category !== 'food');
+    const hasSpending = hasDiet || hasExpense;
+
+    const num = document.createElement('span');
+    num.className = 'cal-day-num';
+    num.textContent = dayNum;
+    cell.appendChild(num);
+
+    // 蓝色圆点表示有消费
+    if (hasSpending && isCurrentMonth) {
+      const dot = document.createElement('span');
+      dot.className = 'cal-day-dot dot-done';
+      cell.appendChild(dot);
+    }
+
+    cell.onclick = () => {
+      if (!isCurrentMonth) {
+        budgetSummaryMonth = new Date(date.getFullYear(), date.getMonth(), 1);
+        renderBudgetSummary();
+        requestAnimationFrame(() => drawBudgetSumPieChart());
+      } else {
+        showBudgetDayPopup(dateStr);
+      }
+    };
+    return cell;
+  }
+
+  function budgetSumChangeMonth(delta) {
+    budgetSummaryMonth.setMonth(budgetSummaryMonth.getMonth() + delta);
+    renderBudgetSummary();
+    requestAnimationFrame(() => drawBudgetSumPieChart());
+  }
+
+  function showBudgetDayPopup(dateStr) {
+    const d = new Date(dateStr);
+    const weekdays = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+    const title = `${d.getMonth() + 1}月${d.getDate()}日 ${weekdays[d.getDay()]}`;
+    document.getElementById('budgetDayPopupTitle').textContent = title;
+
+    const container = document.getElementById('budgetDayPopupList');
+    const dietList = getDietRecordsByDate(dateStr);
+    const dayRecords = budgetRecords.filter(r => r.date === dateStr && r.category !== 'food');
+
+    const catNames = { transport: '交通', shopping: '购物', entertainment: '娱乐', savings: '存钱', other: '其他' };
+    const catIcons = { transport: '🚗', shopping: '🛍️', entertainment: '🎮', savings: '💰', other: '📦' };
+
+    let html = '';
+
+    // 饮食记录
+    if (dietList.length > 0) {
+      const dietTotal = getDietTotalByDate(dateStr);
+      html += `
+        <div class="day-popup-task">
+          <span class="day-popup-task-dot" style="background:#5aa897"></span>
+          <div style="flex:1">
+            <div class="day-popup-task-title">餐饮（饮食）</div>
+            <div style="font-size:11px;color:#999;margin-top:2px">${dietList.length} 条记录</div>
+          </div>
+          <span style="color:#ff5750;font-size:13px;font-weight:600">-¥${dietTotal.toFixed(2)}</span>
+        </div>
+      `;
+    }
+
+    // 其他支出/收入记录
+    dayRecords.forEach(r => {
+      const amountStr = r.type === 'expense' ? `-${Number(r.amount).toFixed(2)}` : `+${Number(r.amount).toFixed(2)}`;
+      const color = r.type === 'expense' ? '#ff5750' : '#34c759';
+      html += `
+        <div class="day-popup-task">
+          <span style="font-size:16px">${catIcons[r.category] || '📦'}</span>
+          <div style="flex:1">
+            <div class="day-popup-task-title">${catNames[r.category] || r.category}</div>
+            <div style="font-size:11px;color:#999;margin-top:2px">${escapeHtml(r.note || '')}</div>
+          </div>
+          <span style="color:${color};font-size:13px;font-weight:600">¥${amountStr}</span>
+        </div>
+      `;
+    });
+
+    if (dietList.length === 0 && dayRecords.length === 0) {
+      html = '<div class="day-popup-empty">当天没有消费记录</div>';
+    }
+
+    container.innerHTML = html;
+
+    document.getElementById('budgetDayPopupOverlay').classList.add('show');
+    document.getElementById('budgetDayPopup').classList.add('show');
+  }
+
+  function closeBudgetDayPopup() {
+    document.getElementById('budgetDayPopupOverlay').classList.remove('show');
+    document.getElementById('budgetDayPopup').classList.remove('show');
   }
 
   // Init
@@ -4178,6 +6263,15 @@
       const summaryPage = document.getElementById('pageSummary');
       if (summaryPage && summaryPage.classList.contains('active')) {
         drawMonthTrendChart();
+      }
+      const budgetSumPage = document.getElementById('budgetSummaryPage');
+      if (budgetSumPage && budgetSumPage.classList.contains('active')) {
+        drawBudgetSumPieChart();
+      }
+      // 主页预算饼图（如果折叠卡片是展开状态）
+      const chartCollapse = document.getElementById('chartCollapse');
+      if (chartCollapse && chartCollapse.classList.contains('open')) {
+        drawBudgetPieChart();
       }
     }, 150);
   });
@@ -4201,6 +6295,18 @@
     </button>
   </div>
   <div class="day-popup-body" id="dayPopupList"></div>
+</div>
+
+<!-- Budget day detail popup -->
+<div class="day-popup-overlay" id="budgetDayPopupOverlay" onclick="closeBudgetDayPopup()"></div>
+<div class="day-popup" id="budgetDayPopup">
+  <div class="day-popup-header">
+    <span class="day-popup-title" id="budgetDayPopupTitle">10月28日 周三</span>
+    <button class="icon-btn" onclick="closeBudgetDayPopup()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="day-popup-body" id="budgetDayPopupList"></div>
 </div>
 
 </body>
